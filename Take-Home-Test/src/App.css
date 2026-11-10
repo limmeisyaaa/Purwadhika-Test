@@ -1,0 +1,249 @@
+.container {
+  width: min(100% - 32px, 760px);
+  margin: 48px auto;
+}
+
+.container h1 {
+  margin: 0 0 8px;
+  color: #172033;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  margin: 0 0 28px;
+  color: #64748b;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.info-card {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.info-card h2 {
+  margin: 0 0 10px;
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.source-data {
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+  color: #334155;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.875rem;
+}
+
+.source-form {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+}
+
+.source-form textarea {
+  width: 100%;
+  min-height: 76px;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #172033;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.875rem;
+  resize: vertical;
+}
+
+.source-form textarea:focus-visible {
+  outline: 3px solid rgb(139 92 246 / 35%);
+  outline-offset: 2px;
+}
+
+.source-help,
+.source-error {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.source-help {
+  color: #64748b;
+}
+
+.source-error {
+  color: #b91c1c;
+}
+
+.source-form button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid #6d28d9;
+  border-radius: 8px;
+  background: #6d28d9;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.source-form button:hover {
+  border-color: #5b21b6;
+  background: #5b21b6;
+}
+
+.double-count {
+  color: #6d28d9;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 32px 0 14px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 1.125rem;
+}
+
+.card-count {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.dominoes-container {
+  display: flex;
+  min-height: 92px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 12px;
+}
+
+.domino-card {
+  display: flex;
+  width: 72px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #172033;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgb(15 23 42 / 6%);
+}
+
+.domino-divider {
+  width: 1px;
+  height: 24px;
+  background: #cbd5e1;
+}
+
+.empty-state {
+  color: #64748b;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.actions button,
+.input-section button {
+  min-height: 40px;
+  padding: 0 15px;
+  border: 1px solid #6d28d9;
+  border-radius: 8px;
+  background: #6d28d9;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.actions button:hover,
+.input-section button:hover:not(:disabled) {
+  border-color: #5b21b6;
+  background: #5b21b6;
+}
+
+.actions button:focus-visible,
+.input-section button:focus-visible,
+.input-section input:focus-visible {
+  outline: 3px solid rgb(139 92 246 / 35%);
+  outline-offset: 2px;
+}
+
+.actions .secondary-button {
+  border-color: #cbd5e1;
+  background: #fff;
+  color: #334155;
+}
+
+.actions .secondary-button:hover {
+  border-color: #94a3b8;
+  background: #f8fafc;
+}
+
+.input-section {
+  display: flex;
+  max-width: 390px;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.input-section input {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #172033;
+  font: inherit;
+}
+
+.input-section button:disabled {
+  border-color: #cbd5e1;
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+@media (max-width: 520px) {
+  .container {
+    margin: 28px auto;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .input-section {
+    max-width: none;
+  }
+}
